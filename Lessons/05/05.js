@@ -1,0 +1,12 @@
+let name = 'Egor';
+console.log(`My name is: ${name}`);
+
+let coffee = 5;
+let bagels = 3;
+let soup = 9;
+let cost = coffee + (2 * bagels) + soup
+console.log(`Cost of food: $${cost}`)
+let tax = cost * 0.1 
+console.log(`Tax (10%): $${tax}`)
+let totalCost = cost + tax
+console.log(`Total cost: $${totalCost}`)

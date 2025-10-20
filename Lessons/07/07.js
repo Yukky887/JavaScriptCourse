@@ -1,0 +1,73 @@
+function greet (name) {
+    if (!name) {
+        console.log(`hello`)
+    } else {
+        console.log(`hello ${name}`)
+    }
+}
+
+greet('Egor');
+greet('Jorik');
+greet('Natasha');
+greet();
+
+function convertToFahrenheit(celsius) {
+    let fahrenheit = (celsius * 9 / 5) + 32
+    console.log(fahrenheit)
+}
+
+convertToFahrenheit(25);
+
+function convertToCelsius(fahrenheit) {
+    let celsius = (fahrenheit - 32) * 5 /9
+    console.log(celsius)
+}
+
+convertToCelsius(86);
+
+function convertTemperature (degrees, unit) {
+    if (unit == 'C') {
+        convertToCelsius(degrees);
+    } else if (unit == 'F') {
+        convertToFahrenheit(degrees);
+    }
+}
+
+convertTemperature(25, 'F');
+convertTemperature(86, 'C');
+
+function convertLength(length, from, to) {
+    if (from == 'miles' && to == 'km') {
+        let result = length * 1.6;
+        console.log(result);
+    } else if (from == 'km'  && to == 'miles') {
+        let result = length / 1.6;
+        console.log(result);
+    } else if (from == 'miles' && to == 'ft') {
+        let result = length * 5280;
+        console.log(result);
+    } else if (from == 'km' && to == 'ft') {
+        let result = length * 3281;
+        console.log(result);
+    } else if (from == 'ft' && to == 'miles') {
+        let result = length / 5280;
+        console.log(result);
+    } else if (from == 'ft' && to == 'km') {
+        let result = length / 3281;
+        console.log(result);
+    } else if (from == to) {
+        console.log(length);
+    } else {
+        console.log('Invalid units');
+    }
+}
+
+convertLength(50, 'miles', 'km');
+convertLength(32, 'km', 'miles');
+convertLength(5, 'miles', 'ft');
+convertLength(5, 'km', 'ft');
+convertLength(5, 'ft', 'ft');
+convertLength(26400, 'ft', 'miles');
+convertLength(16405, 'ft', 'km');
+convertLength(50, 'miles', 'miles');
+convertLength(50, 'km', 'km');

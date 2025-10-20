@@ -1,0 +1,11 @@
+const randomNumber = Math.random();
+
+let result = randomNumber < 0.5 ? 'heads' : 'tails';
+
+console.log(result)
+
+const guess = 'heads';
+
+const message = result == guess ? 'You win!' : 'You lose!'
+
+console.log(message)
