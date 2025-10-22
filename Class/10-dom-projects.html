@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DOM Projects</title>
+		<!-- <script src="Scripts/09-dom-projects.js" defer></script>
+		<link rel="stylesheet" href="Styles/10-dom-projects.css"> -->
+		<style>
+			p {
+				font-family: Arial;
+			}
+
+			.subscribe-button {
+				background-color: black;
+				color: white;
+				padding: 10px 15px 10px 15px;
+				font-size: 18px;
+				font-weight: 600;
+				border: none;
+				border-radius: 50px;
+				cursor: pointer;
+				margin-bottom: 30px;
+			}
+
+			.is-subscribed {
+				background-color: rgb(240, 240, 240);
+				color: rgb(0, 0, 0);
+			}
+
+			.cost-input {
+				font-size: 15px;
+				padding: 10px;
+			}
+
+			.calculate-button {
+				background-color: green;
+				color: white;
+				border: none;
+				font-size: 15px;
+				padding: 12px 15px;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<p>YouTube Subscribe Button</p>
+		<button onclick="toggleText();" class="js-subscribe-button subscribe-button" >Subscribe</button>
+
+		<p>Amazon Shipping Calculator</p>
+		<input placeholder="Cost of order" class="js-cost-input cost-input" onkeydown="checkEnter(event);">
+		<button onclick="
+			calculateTotal();	
+		" class="calculate-button">Calculate</button>
+
+		<p class="js-total-cost"></p>
+		
+		<script>
+			function toggleText() {
+
+				const buttonElement = document.querySelector('.js-subscribe-button') 
+				if (buttonElement.innerText === 'Subscribe') {
+					buttonElement.innerText = 'Subscribed';
+					buttonElement.classList.add('is-subscribed');
+				} else {
+					buttonElement.innerText = 'Subscribe';
+					buttonElement.classList.remove('is-subscribed');
+				}
+			}
+
+			String(25);
+			console.log('25' - 5);
+			console.log('25' + 5);
+
+			window.console.log('window')
+			window.alert
+			
+			function calculateTotal() {
+				const inputElement = document.querySelector(`.js-cost-input`);
+
+				let cost = Number(inputElement.value);
+
+				if (cost < 40) {
+					cost += 10;
+				}
+
+				document.querySelector('.js-total-cost')
+					.innerHTML = `$${cost}`;
+			}
+
+			function checkEnter(event) {
+				if (event.key === 'Enter') {
+					calculateTotal();
+				}
+			}
+		</script>
+	</body>
+</html>
