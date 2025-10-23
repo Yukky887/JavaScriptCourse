@@ -1,0 +1,20 @@
+p {
+	font-family: Arial;
+}
+
+.subscribe-button {
+	background-color: black;
+	color: white;
+	padding: 10px 15px 10px 15px;
+	font-size: 18px;
+	font-weight: 600;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+}
+
+.is-subscribed {
+	background-color: rgb(197, 197, 197);
+	color: white;
+}
+

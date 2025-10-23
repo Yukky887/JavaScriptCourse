@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>10a</title>
+        <link rel="stylesheet" href="./10a.css">
+    </head>
+    <body>
+        <button class="js-class">test</button>
+        <button onclick="clickButton('js-game-button')" class=" js-button js-game-button switch-button">game</button>
+        <button onclick="clickButton('js-music-button')" class="js-button js-music-button switch-button">music</button>
+        <button onclick="clickButton('js-tech-button')" class="js-button js-tech-button switch-button">tech</button>
+        <script>
+            let buttonElement = document.querySelector('.js-class');
+
+            if (buttonElement.classList.contains('js-class') === true) {
+                console.log('クラス名「js-class」を持っています。');
+            }
+
+            function clickButton(className) {
+                let buttonSwitch = document.querySelector(`.${className}`);
+                let activeButtons = document.querySelectorAll('.js-button');
+
+                if (!buttonSwitch.classList.contains('is-active')) {
+                    activeButtons.forEach(button => {
+                        button.classList.remove('is-active');
+                    })
+                    buttonSwitch.classList.add('is-active');
+                } else {
+                    buttonSwitch.classList.remove('is-active');
+                }
+            }
+        </script>
+    </body>
+</html>
