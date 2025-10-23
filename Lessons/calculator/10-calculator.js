@@ -21,3 +21,10 @@ function calculate(calculation) {
     calculation = '';
     localStorage.removeItem('calculation');
 }
+
+function resetCalculate() {
+    calculation = '';
+    document.querySelector('.calculateResult')
+        .innerHTML = calculation;
+    localStorage.removeItem('calculation');
+}

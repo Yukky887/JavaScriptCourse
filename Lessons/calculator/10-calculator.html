@@ -2,28 +2,41 @@
 <html>
 	<head>
 		<title>Calculator</title>
+		<link rel="stylesheet" href="./10-calculator.css">
 	</head>
 	<body>
 		<p class="calculateResult"></p>
 
 		<p>
 			<button
+				class="
+					grayButton
+				"
 				onclick="
 					updateCalculator(1);
 					"
 			>1</button>
 			<button
-			onclick="
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(2);
 					"
 			>2</button>
-			<button 
-			onclick="
+			<button
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(3);
 					"
 			>3</button>
 			<button
-			onclick="
+				class="
+					orangeButton
+				"
+				onclick="
 					updateCalculator(`+`);
 				"
 			>+</button>
@@ -31,71 +44,117 @@
 
 		<p>
 			<button
+				class="
+					grayButton
+				"
 				onclick="
 					updateCalculator(4);
 					"
 			>4</button>
 			<button
-			onclick="
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(5);
 					"
 			>5</button>
-			<button 
-			onclick="
+			<button
+				class="
+					grayButton
+				" 
+				onclick="
 					updateCalculator(6);
 					"
 			>6</button>
 			<button
-			onclick="
+				class="
+					orangeButton
+				"
+				onclick="
 					updateCalculator(`-`);
 				"
 			>-</button>
 		</p>
 		<p>
 			<button
+				class="
+					grayButton
+				"
 				onclick="
 					updateCalculator(7);
 					"
 			>7</button>
 			<button
-			onclick="
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(8);
 					"
 			>8</button>
 			<button 
-			onclick="
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(9);
 					"
 			>9</button>
 			<button
-			onclick="
+				class="
+					orangeButton
+				"
+				onclick="
 					updateCalculator(`*`);
 				"
 			>*</button>
 		</p>
 		<p>
 			<button
+				class="
+					grayButton
+				"
 				onclick="
 					updateCalculator(0);
 					"
 			>0</button>
 			<button
-			onclick="
+				class="
+					grayButton
+				"
+				onclick="
 					updateCalculator(`.`);
-					"
+				"
 			>.</button>
 			<button
-			onclick="
-				calculate(calculation);
-			"
+				class="
+					grayButton
+				"
+				onclick="
+					calculate(calculation);
+				"
 			>=</button>
 			<button
-			onclick="
+				class="
+					orangeButton
+				"
+				onclick="
 					updateCalculator(`/`);
 				"
 			>/</button>
 		</p>
+
+		<button
+				class="
+					grayButton
+					clearButton
+				"
+				onclick="
+					resetCalculate();
+				"
+			>Clear</button>
 		
-		<script src="./09-calculator.js"></script>
+		<script src="./10-calculator.js"></script>
 	</body>
 </html>
