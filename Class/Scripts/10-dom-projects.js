@@ -32,8 +32,6 @@ function calculateTotal() {
 		document.querySelector('.js-total-cost')
 		.innerHTML = `Cost cannot be less than $0`;
 	}
-
-	
 }
 
 function checkEnter(event) {
