@@ -140,11 +140,10 @@ console.log(minMax([]));
 
 function countWord(words) {
 	const objectWord = {};
-	const countWords = 1;
 	for (let i = 0; i < words.length; i++) {
 		const word = words[i];
 		if (!(word in objectWord)) {
-			objectWord[word] = countWords;
+			objectWord[word] = 1;
 		} else {
 			objectWord[word] ++;
 		}
