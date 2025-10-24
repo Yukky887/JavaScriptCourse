@@ -100,3 +100,56 @@ function countPositive(array) {
 
 countPositive([1, -3, 5]);
 countPositive([-2, 3, -5, 7, 10]);
+
+function minMaxB(array) {
+	let min = 100;
+	let max = -100;
+	for (let i = 0; i < array.length; i++) {
+		if (array[i] < min) {
+			min = array[i]
+		}
+		if (array[i] > max) {
+			max = array[i]
+		}
+		
+	}
+	console.log(min, max);
+}
+
+minMaxB([1, -3, 5]);
+minMaxB([-2, 3, -5, 7, 10]);
+
+function minMax(array) {
+	if (array.length === 0) {
+		return {
+			min: null,
+			max: null
+		}
+	}
+	
+	return {
+		min: Math.min(...array),
+		max: Math.max(...array)
+	}
+}
+
+console.log(minMax([1, -3, 5]));
+console.log(minMax([-2, 3, -5, 7, 10]));
+console.log(minMax([3]));
+console.log(minMax([]));
+
+function countWord(words) {
+	const objectWord = {};
+	const countWords = 1;
+	for (let i = 0; i < words.length; i++) {
+		const word = words[i];
+		if (!(word in objectWord)) {
+			objectWord[word] = countWords;
+		} else {
+			objectWord[word] ++;
+		}
+	}
+	console.log(objectWord);
+}
+
+countWord(['apple', 'grape', 'apple', 'apple']);
