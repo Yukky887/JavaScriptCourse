@@ -166,8 +166,8 @@ function searchSearch (array) {
 	return searchIndex;
 }
 
-console.log(searchSearch(['hello', 'world', 'search', 'good', 'search']));
-console.log(searchSearch(['hello', 'world', 'good']));
+// console.log(searchSearch(['hello', 'world', 'search', 'good', 'search']));
+// console.log(searchSearch(['hello', 'world', 'good']));
 
 function searchWord (array, searchWord) {
 	let searchIndex = -1;
@@ -182,7 +182,7 @@ function searchWord (array, searchWord) {
 	return searchIndex;
 }
 
-console.log(searchWord(['hello', 'world', 'search', 'good', 'search'], 'good'));
+console.log(searchWord(['hello', 'world', 'search', 'good', 'search', 'good'], 'good'));
 console.log(searchWord(['hello', 'world', 'good'], 'cat'));
 
 function removeEgg (foods) {
@@ -205,6 +205,39 @@ function removeEgg (foods) {
 	return foodsNoEgg.reverse();
 }
 
-const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
-console.log(removeEgg(foods));
-console.log(foods);
+// const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+// console.log(removeEgg(foods));
+// console.log(foods);
+
+function fizzBuzz(count) {
+	for(let i = 0; i < count; i++) {
+		if (i % 3 === 0 && i % 5 === 0) {
+			num = 'FizzBuzz';
+		} else if(i % 5 === 0) {
+			num = 'Buzz';
+		} else if (i % 3 === 0) {
+			num = 'Fizz'
+		} else {
+			num = i;
+		}
+		console.log(num);
+	}
+}
+
+// fizzBuzz(20);
+
+function unique(array) {
+	let uniqueArray = [];
+	for (let i = 0; i < array.length; i++) {
+		let word = array[i];
+		if (searchWord(uniqueArray, word) === -1) {
+			uniqueArray.push(word);
+		} else if (searchWord(uniqueArray, word) > 0){
+			continue;
+		}
+	}
+
+	return uniqueArray;
+}
+
+console.log(unique(['red','green','green','red']));
