@@ -152,3 +152,59 @@ function countWord(words) {
 }
 
 countWord(['apple', 'grape', 'apple', 'apple']);
+
+function searchSearch (array) {
+	let searchIndex = -1;
+	for (let i = 0; i < array.length; i++) {
+		const word = array[i];
+		if (word === 'search') {
+			searchIndex = i;
+			break;
+		}
+	}
+	
+	return searchIndex;
+}
+
+console.log(searchSearch(['hello', 'world', 'search', 'good', 'search']));
+console.log(searchSearch(['hello', 'world', 'good']));
+
+function searchWord (array, searchWord) {
+	let searchIndex = -1;
+	for (let i = 0; i < array.length; i++) {
+		const word = array[i];
+		if (word === searchWord) {
+			searchIndex = i;
+			break;
+		}
+	}
+	
+	return searchIndex;
+}
+
+console.log(searchWord(['hello', 'world', 'search', 'good', 'search'], 'good'));
+console.log(searchWord(['hello', 'world', 'good'], 'cat'));
+
+function removeEgg (foods) {
+	let foodsNoEgg = [];
+	let egg = 0;
+	let reverseFoods = foods.slice();
+	reverseFoods = reverseFoods.reverse();
+	for (let i = 0; i < foods.length; i++) {
+
+		const word = reverseFoods[i];
+
+		if (word === 'egg' && egg < 2) {
+			egg++;
+			continue;
+		}
+
+		foodsNoEgg.push(word);
+	}
+	
+	return foodsNoEgg.reverse();
+}
+
+const foods = ['egg', 'apple', 'egg', 'egg', 'ham'];
+console.log(removeEgg(foods));
+console.log(foods);

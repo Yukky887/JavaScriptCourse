@@ -61,14 +61,14 @@ for (let i = 0; i < nums.length; i++) {
 console.log(total);
 
 
-// const numsDoubled = [];
+const numsDoubled = [];
 
-// for (let i = 0; i < nums.length; i++) {
-// 	const num = nums[i];
-// 	numsDoubled.push(num * 2);
-// }
+for (let i = 0; i < nums.length; i++) {
+	const num = nums[i];
+	numsDoubled.push(num * 2);
+}
 
-// console.log(numsDoubled);
+console.log(numsDoubled);
 
 const array1 = [1, 2, 3];
 const array2 = array1.slice();
