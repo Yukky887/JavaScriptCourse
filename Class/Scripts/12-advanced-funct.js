@@ -67,7 +67,7 @@ const regularFunction = function(param, param2) {
 	return 5;
 };
 
-const arrowFunction= (param, param2) => {
+const arrowFunction = (param, param2) => {
 	console.log('hello');
 	return 5;
 };
